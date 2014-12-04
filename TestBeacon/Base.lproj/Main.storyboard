@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gm9-9A-6Lz">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHt-Tw-dQ9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vnV-Dz-XW3"/>
+                                </constraints>
+                                <state key="normal" title="开始定位">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vnV-Dz-XW3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="vnV-Dz-XW3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U7A-XZ-0HN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nHt-Tw-dQ9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0Aq-hs-Ud5"/>
+                            <constraint firstAttribute="trailing" secondItem="Gm9-9A-6Lz" secondAttribute="trailing" id="7Qf-vT-iQg"/>
+                            <constraint firstItem="nHt-Tw-dQ9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="JXI-xd-6mx"/>
+                            <constraint firstItem="Gm9-9A-6Lz" firstAttribute="top" secondItem="nHt-Tw-dQ9" secondAttribute="bottom" constant="40" id="Rbw-oE-6kM"/>
+                            <constraint firstAttribute="trailing" secondItem="nHt-Tw-dQ9" secondAttribute="trailing" id="gSW-Pt-svC"/>
+                            <constraint firstItem="Gm9-9A-6Lz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="guo-f9-vTd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gm9-9A-6Lz" secondAttribute="bottom" id="hmn-q0-aM2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Gm9-9A-6Lz"/>
+                                <exclude reference="nHt-Tw-dQ9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="hmn-q0-aM2"/>
+                                <exclude reference="0Aq-hs-Ud5"/>
+                                <exclude reference="JXI-xd-6mx"/>
+                                <exclude reference="gSW-Pt-svC"/>
+                                <exclude reference="7Qf-vT-iQg"/>
+                                <exclude reference="Rbw-oE-6kM"/>
+                                <exclude reference="guo-f9-vTd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Gm9-9A-6Lz"/>
+                                <include reference="nHt-Tw-dQ9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="hmn-q0-aM2"/>
+                                <include reference="0Aq-hs-Ud5"/>
+                                <include reference="JXI-xd-6mx"/>
+                                <include reference="gSW-Pt-svC"/>
+                                <include reference="7Qf-vT-iQg"/>
+                                <include reference="Rbw-oE-6kM"/>
+                                <include reference="guo-f9-vTd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="gpsButton" destination="nHt-Tw-dQ9" id="xo6-U6-zMS"/>
+                        <outlet property="showResultView" destination="Gm9-9A-6Lz" id="8he-p8-pww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310.5" y="171.75"/>
+        </scene>
+    </scenes>
+</document>
